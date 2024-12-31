@@ -1,4 +1,4 @@
-FoonteDuino	KEYWORD1
+FonnteDuino	KEYWORD1
 sendMessage	KEYWORD2
 sendMessageWithDelay	KEYWORD2
 setCountryCode	KEYWORD2
