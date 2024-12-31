@@ -1,12 +1,12 @@
-#include "KelasRobotFonnte.h"
+#include "FonnteDuino.h"
 
 // Constructor untuk inisialisasi token
-KelasRobotFonnte::KelasRobotFonnte(const char* token) {
+FonnteDuino::FonnteDuino(const char* token) {
     this->apiToken = token;
 }
 
 // Fungsi untuk menghubungkan ke WiFi dengan parameter ssid dan password
-void KelasRobotFonnte::connectToWiFi(const char* ssid, const char* password) {
+void FonnteDuino::connectToWiFi(const char* ssid, const char* password) {
     this->ssid = ssid;
     this->password = password;
 
@@ -19,7 +19,7 @@ void KelasRobotFonnte::connectToWiFi(const char* ssid, const char* password) {
 }
 
 // Fungsi untuk mengirim pesan melalui API Fonnte
-void KelasRobotFonnte::sendMessage(const String& target, const String& message) {
+void FonnteDuino::sendMessage(const String& target, const String& message) {
     if (WiFi.status() == WL_CONNECTED) {
 #if defined(ESP8266)
         std::unique_ptr<BearSSL::WiFiClientSecure> client(new BearSSL::WiFiClientSecure);
@@ -54,17 +54,17 @@ void KelasRobotFonnte::sendMessage(const String& target, const String& message) 
 }
 
 // Fungsi untuk mengirim pesan dengan delay
-void KelasRobotFonnte::sendMessageWithDelay(const String& target, const String& message, unsigned long delayTime) {
+void FonnteDuino::sendMessageWithDelay(const String& target, const String& message, unsigned long delayTime) {
     delay(delayTime);  // Penundaan dalam milidetik
     sendMessage(target, message);  // Panggil fungsi sendMessage setelah delay
 }
 
 // Fungsi untuk mengubah kode negara
-void KelasRobotFonnte::setCountryCode(const String& newCountryCode) {
+void FonnteDuino::setCountryCode(const String& newCountryCode) {
     this->countryCode = newCountryCode;
 }
 
 // Fungsi untuk mendapatkan country code saat ini
-String KelasRobotFonnte::getCountryCode() const {
+String FonnteDuino::getCountryCode() const {
     return this->countryCode;
 }
