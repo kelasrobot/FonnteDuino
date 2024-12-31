@@ -10,7 +10,7 @@
   #include <HTTPClient.h>
 #endif
 
-class FoonteDuino {
+class FonnteDuino {
   private:
     String apiToken;
     const char* ssid;
@@ -20,7 +20,7 @@ class FoonteDuino {
 
   public:
     // Constructor untuk inisialisasi token
-    FoonteDuino(const char* token);
+    FonnteDuino(const char* token);
 
     // Fungsi untuk menghubungkan ke WiFi dengan parameter ssid dan password
     void connectToWiFi(const char* ssid, const char* password);
