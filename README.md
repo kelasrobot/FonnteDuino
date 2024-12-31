@@ -1,6 +1,6 @@
-# FoonteDuino
+# FonnteDuino
 
-**FoonteDuino** adalah library Arduino yang memudahkan pengiriman pesan WhatsApp melalui API Fonnte menggunakan ESP32 atau ESP8266. Library ini memungkinkan Anda untuk menghubungkan perangkat ke jaringan WiFi, mengonfigurasi token API Anda, dan mengirim pesan dengan mudah melalui platform Fonnte. Library ini ideal digunakan untuk aplikasi IoT yang memerlukan notifikasi atau peringatan langsung melalui WhatsApp.
+**FonnteDuino** adalah library Arduino yang memudahkan pengiriman pesan WhatsApp melalui API Fonnte menggunakan ESP32 atau ESP8266. Library ini memungkinkan Anda untuk menghubungkan perangkat ke jaringan WiFi, mengonfigurasi token API Anda, dan mengirim pesan dengan mudah melalui platform Fonnte. Library ini ideal digunakan untuk aplikasi IoT yang memerlukan notifikasi atau peringatan langsung melalui WhatsApp.
 
 ## Fitur
 
@@ -22,20 +22,20 @@ Untuk menggunakan API Fonnte, Anda perlu mendaftar dan mendapatkan token. Anda b
 2. **Install Library melalui Arduino IDE**:  
    - Buka Arduino IDE
    - Pilih **Sketch** > **Include Library** > **Add .ZIP Library**
-   - Pilih file `.zip` dari library **FoonteDuino** yang sudah diunduh.
+   - Pilih file `.zip` dari library **FonnteDuino** yang sudah diunduh.
 
 3. **Gunakan Library**:  
-   Setelah library terinstal, Anda dapat langsung menggunakan **FoonteDuino** di sketch Arduino Anda.
+   Setelah library terinstal, Anda dapat langsung menggunakan **FonnteDuino** di sketch Arduino Anda.
 
 ## Contoh Penggunaan
 
 Berikut adalah contoh penggunaan sederhana library ini:
 
 ```cpp
-#include <FoonteDuino.h>
+#include <FonnteDuino.h>
 
-// Inisialisasi objek FoonteDuino dengan token API Anda
-FoonteDuino fonnte("YOUR_FONNTE_TOKEN");
+// Inisialisasi objek FonnteDuino dengan token API Anda
+FonnteDuino fonnte("YOUR_FONNTE_TOKEN");
 
 void setup() {
   Serial.begin(115200);
